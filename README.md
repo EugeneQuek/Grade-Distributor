@@ -7,9 +7,9 @@ Task allocation:
 2. Flask (HT)
 3. Html (EQ)
 
-Test cases:
-Username: student1
-Password: spw1
+Test cases:  
+Username: student1  
+Password: spw1  
 
-Username: teacher1
-Password: tpw1
+Username: teacher1  
+Password: tpw1  
