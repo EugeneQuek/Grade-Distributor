@@ -1,0 +1,15 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ffffe0;
+}
+
+form {
+	text-align: center
+}
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: center;
+}

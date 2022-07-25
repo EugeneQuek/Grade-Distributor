@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Grades</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Task 1</th>
+      <th>Task 2</th>
+      <th>Total</th>
+    </tr>
+    {% for student_grade in student_grades %}
+      <tr>
+        {% for grade in student_grade %}
+          <td>{{grade}}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+   
+  </thead>
+</table>
+{% endblock %}

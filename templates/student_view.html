@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Name</h2>
+{{ student_name }}
+
+<h2>Grades</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Task 1</th>
+      <th>Task 2</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      {% for grade in grades %}
+        <td>{{grade}}</td>
+      {% endfor %}
+    </tr>
+  </thead>
+</table>
+{% endblock %}
