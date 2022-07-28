@@ -13,3 +13,12 @@ Password: spw1
 
 Username: teacher1  
 Password: tpw1  
+
+Database tables:
+
+Table 1: login_details
+Column names: login_name, password, name, role
+
+Table 2: student_grades
+Column names: name (same as login_name from table login_details), Task1, Task2, Total
+

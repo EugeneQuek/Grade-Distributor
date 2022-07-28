@@ -3,7 +3,7 @@ body {
   background: #ffffe0;
 }
 
-form {
+#home {
 	text-align: center
 }
 
@@ -12,4 +12,8 @@ table, th, td {
   border-collapse: collapse;
   padding: 15px;
   text-align: center;
+}
+
+#ErrorMessage {
+  text-align: center
 }

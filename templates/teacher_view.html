@@ -1,14 +1,20 @@
 {% extends "layout.html" %}
 
 {% block body %}
+
+<p align=right>
+  <a href="https://Grade-Distributor.eugenequek.repl.co"><button>Log out</button></a>
+</p>
+
 <h2>Grades</h2>
 <table>
   <thead>
     <tr>
+      <th>Username</th>
       <th>Student Name</th>
-      <th>Task 1</th>
-      <th>Task 2</th>
-      <th>Total</th>
+      {% for component in components %}
+        <th>{{component}}</th>
+      {% endfor %}
     </tr>
     {% for student_grade in student_grades %}
       <tr>
@@ -19,5 +25,31 @@
     {% endfor %}
    
   </thead>
-</table>
+</table><br>
+
+<h2>Edit Marks</h2>
+
+<form action='/editmarks' method="post">
+<label for="usernames">Student username:</label>
+<select name="usernames">
+	{% for username in usernames %}
+		<option value="{{username}}">{{username}}</option>
+	{% endfor %}
+</select><br><br>
+<label for="qn_num">Question number:</label>
+<select name="qn_num">
+  {% for header in headers %}
+	<option value="{{header}}">{{header}}</option>
+	{% endfor %}
+</select><br><br>
+New Marks:<input type="number" name="new_marks"><br><br>
+<input type="submit"><br><br>
+</form>
+
+{{message}}<br><br>
+
+<form action='/createdb' method=('post','get')>
+  <button>Create Database</button>
+</form>
+
 {% endblock %}

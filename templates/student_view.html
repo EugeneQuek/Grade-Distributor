@@ -4,13 +4,17 @@
 <h2>Name</h2>
 {{ student_name }}
 
+<p align=right>
+  <a href="https://Grade-Distributor.eugenequek.repl.co"><button>Log out</button></a>
+</p>
+
 <h2>Grades</h2>
 <table>
   <thead>
     <tr>
-      <th>Task 1</th>
-      <th>Task 2</th>
-      <th>Total</th>
+      {% for component in components %}
+        <th>{{component}}</th>
+      {% endfor %}
     </tr>
     <tr>
       {% for grade in grades %}
@@ -19,4 +23,5 @@
     </tr>
   </thead>
 </table>
+
 {% endblock %}
